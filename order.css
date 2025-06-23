@@ -1,0 +1,105 @@
+.content {
+    width: 60%;
+    height: 150%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    position: absolute;
+    justify-content: center;
+    background: rgb(241, 237, 244);
+    padding: 75px;
+    margin-top: 100px;
+    margin-left: 15%;
+}
+
+.form {
+    width: 900px;
+    height: 1500px;
+    justify-content: center;
+    display: flex;
+}
+
+.form form {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.orders {
+    display: flex;
+    flex-direction: row;
+}
+
+.orders input {
+    margin-bottom: 30px;
+    width: 300px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 20px; 
+    border: none;
+    padding-left: 15px;
+
+}
+
+.list {
+    margin: 15px;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-info input {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 30px;
+    justify-content: center;
+    border-radius: 20px; 
+    border: none;
+    padding-left: 15px; 
+}
+
+.form button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(234, 215, 230);
+}
+
+.form button:hover {
+    background: rgb(233, 222, 230); 
+}
+
+.message {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background: rgb(241, 237, 244);
+
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.message button {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(234, 215, 230);
+    margin-top: 20px;
+    
+}
