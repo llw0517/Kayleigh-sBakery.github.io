@@ -1,0 +1,111 @@
+body {
+    margin: 0 0 0 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    padding-bottom: 100px;
+}
+
+.header_chinese {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    align-items: center;
+    font-family: "Noto Serif HK", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+    margin-top: 10pxß;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 65px;
+    align-items: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.name {
+    width: 500px;
+    background-color:  rgb(245, 234, 234);
+    color: rgb(199, 159, 159);
+    font-size: 34px;
+    font-weight: 500;
+    height: 65px;
+    padding-left: 15px;
+    font-family: "Pacifico", cursive;
+}
+
+.menu-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    background-color:  rgb(245, 234, 234);
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+.menu-button {
+    display: absolute;
+    border: none;
+    background-color:  rgb(245, 234, 234);
+    color: rgb(199, 159, 159);
+    width: 100px;
+    height: 100%;
+    font-size: 20px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-left:5px;
+    border-radius: 20px;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+    background-color: rgb(242, 229, 231);
+}
+
+.page-name {
+    color: black;
+    font-size: 34px;
+    font-weight: 500;
+    height: 34px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.language {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    height:25px;
+    width: 100px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.language-type {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.language-type:visited {
+    color: black;
+}
+
+.language-type:hover {
+    color: rgb(199, 159, 159);
+}

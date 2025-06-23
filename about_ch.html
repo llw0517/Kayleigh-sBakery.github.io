@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kayleigh's Bakery | 介紹</title>
+        <link rel="stylesheet" href="about.css"> 
+        <link rel="stylesheet" href="general.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function() {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+            }, 4000);
+        </script>
+
+        <div class="header_chinese">
+            <div class="name">
+                Kayleigh's Bakery
+            </div>
+            <div class="menu-bar">
+                <a href="about_ch.html"><button class="menu-button" style="background-color: rgb(255, 255, 255);">介紹</button></a>
+                <a href="work_ch.html"><button class="menu-button">工作</button></a>
+                <a href="study_ch.html"><button class="menu-button">學業</button></a>
+                <a href="contact_ch.html"><button class="menu-button">聯絡</button></a>
+            </div>
+        </div>
+        
+        <div class="slider">
+            <div class="slides">
+                <!--radio button-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                
+                <!--images-->
+                <div class="slide first">
+                    <img src="business_card_front.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="business_card_back.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="logo.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="logo.png" alt="">
+                </div>
+                
+                <!--auto navigation-->
+                <div class="auto-navigation">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+
+            <!--manual nagivation-->
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+
+        <div class="language">
+            <a class="language-type" href="about_ch.html">中</a>
+            <a class="language-type" href="about.html">EN</a>
+        </div>
+    </body>
+</html>
