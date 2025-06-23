@@ -75,3 +75,16 @@
 .form button:hover {
     background: rgb(233, 222, 230); 
 }
+
+.message {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
