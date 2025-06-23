@@ -86,11 +86,12 @@
     justify-content: center;
     border-radius: 40px;
     background: rgb(241, 237, 244);
-
     margin: 0;
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .message button {
