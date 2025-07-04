@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kayleigh's Bakery | Product</title>
+        <link rel="stylesheet" href="../general.css">
+        <link rel="stylesheet" href="product-item.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="OatmealRaisinCookie.js"></script>
+
+        <div class="header">
+            <div class="name">
+                Kayleigh's Bakery
+            </div>
+            <div class="menu-bar">
+                <a href="../about.html"><button class="menu-button">About</button></a>
+                <a href="../product.html"><button class="menu-button" style="background-color: rgb(255, 255, 255);">Product</button></a>
+                <a href="../cart.html"><button class="menu-button">Cart</button></a>
+                <a href="../contact.html"><button class="menu-button">Contact</button></a>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="../logo.png" alt="Oatmeal Raisin Cookie" class="product-image">
+            <h1 class="product-title">Oatmeal Raisin Cookie</h1>
+            <p class="product-price" id="price"></p>
+            <p class="product-description">A classic chocolate chip cookie made with rich chocolate chips and a soft, chewy texture. Perfect for any occasion!</p>
+            <div class="baked">
+                <input type="radio" name="baked" id="baked-yes" checked>
+                <label for="baked-yes">Baked</label>
+                <input type="radio" name="baked" id="baked-no">
+                <label for="baked-no">Dough</label>
+            </div>
+            <div class="choose-amount">
+                <button class="amount-button" id="minus">-</button>
+                <span class="amount" id="amount"></span>
+                <button class="amount-button" id="plus">+</button>
+            </div>
+            <button class="add-to-cart" id="add-to-cart">Add to Cart</button>   
+        </div>
+</html>
