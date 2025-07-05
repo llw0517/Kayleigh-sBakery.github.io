@@ -1,37 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Kayleigh's Bakery | Product</title>
-        <link rel="stylesheet" href="general.css">
-        <link rel="stylesheet" href="product-item.css"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <script src="product.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayleigh's Bakery | Cart</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <div class="header">
-            <div class="name">
-                Kayleigh's Bakery
-            </div>
-            <div class="menu-bar">
-                <a href="about.html"><button class="menu-button">About</button></a>
-                <a href="product.html"><button class="menu-button">Product</button></a>
-                <a href="cart.html"><button class="menu-button" style="background-color: rgb(255, 255, 255);">Cart</button></a>
-                <a href="contact.html"><button class="menu-button">Contact</button></a>
-            </div>
+    <div class="header">
+        <div class="name">
+            Kayleigh's Bakery
         </div>
-
-        <div class="container">
-            <div class="item">
-                <img src="logo.png" alt="Chocolate Chip Cookie">
-                <p>Chocolate Chip Cookie</h2>
-                <p>$3.00</p>
-            </div>
+        <div class="menu-bar">
+            <a href="about.html"><button class="menu-button">About</button></a>
+            <a href="product.html"><button class="menu-button">Product</button></a>
+            <a href="cart.html"><button class="menu-button" style="background-color: rgb(255, 255, 255);">Cart</button></a>
+            <a href="contact.html"><button class="menu-button">Contact</button></a>
         </div>
+    </div>
 
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+  
+        <!-- Cart item list goes here -->
+        <div id="cart-items"></div>
+  
+        <!-- Cart total goes here -->
+        <div class="total" id="cart-total"></div>
+    </div>
+    
+    <div class="form" style="margin-top: 40px;">
+        <h2>Complete Your Order</h2>
+        <form id="order-form" action="https://formsubmit.co/oscarlam597@gmail.com" method="POST">
+          <input type="text" name="Name" placeholder="Name" required>
+          <input type="email" name="Email" placeholder="Email" required>
+          <textarea name="Order Details" id="order-details" style="display:none;"></textarea>
+      
+          <!-- Hidden FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New Order from Kayleigh's Bakery">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="https://llw0517.github.io/Kayleigh-sBakery.github.io/contact-response.html">
+      
+          <button type="submit">Place Order</button>
+        </form>
+      </div>
+
+    <!-- Scripts -->
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", renderCart);
+    </script>
+    <script>
+        // Inject cart contents into hidden textarea before form submission
+        const orderForm = document.getElementById("order-form");
+        orderForm.addEventListener("submit", function (e) {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const orderDetailsField = document.getElementById("order-details");
+      
+          if (cart.length === 0) {
+            alert("Your cart is empty. Please add some items before placing an order.");
+            e.preventDefault();
+            return;
+          }
+      
+          let message = "Order Summary:\n\n";
+          let total = 0;
+      
+          cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            message += `- ${item.name} (${item.option}): ${item.quantity} x $${item.price.toFixed(2)} = $${itemTotal.toFixed(2)}\n`;
+          });
+      
+          message += `\nTotal: $${total.toFixed(2)}`;
+      
+          orderDetailsField.value = message;
+      
+          localStorage.removeItem("cart");
+        });
+      </script>
+      
+</body>
 </html>

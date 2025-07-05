@@ -1,43 +1,50 @@
-const priceBaked = "$3.50";
-const priceDough = "$2.50";
 
-var unit = 1;
-var baked = true;
+const priceBaked = 3.50;
+const priceDough = 2.50;
+
+let unit = 1;
+let baked = true;
 
 window.onload = function () {
-    document.getElementById("amount").innerText = unit;
-    document.getElementById("price").innerText = priceBaked;
+    const priceElement = document.getElementById("price");
+    const amountElement = document.getElementById("amount");
+
+    amountElement.innerText = unit;
+    priceElement.innerText = `$${priceBaked.toFixed(2)}`;
 
     document.getElementById("plus").addEventListener("click", function () {
         unit++;
-        document.getElementById("amount").innerText = unit;
+        amountElement.innerText = unit;
     });
-  
+
     document.getElementById("minus").addEventListener("click", function () {
         if (unit > 1) {
-        unit--;
-        document.getElementById("amount").innerText = unit;
+            unit--;
+            amountElement.innerText = unit;
         }
     });
 
     document.getElementById("baked-yes").addEventListener("click", function () {
         baked = true;
-        document.getElementById("price").innerText = priceBaked;
+        priceElement.innerText = `$${priceBaked.toFixed(2)}`;
     });
 
     document.getElementById("baked-no").addEventListener("click", function () {
         baked = false;
-        document.getElementById("price").innerText = priceDough
+        priceElement.innerText = `$${priceDough.toFixed(2)}`;
     });
 
     document.getElementById("add-to-cart").addEventListener("click", function () {
-        if (baked) {
-            sessionStorage.setItem("ChocolateChip-baked", unit);
-            alert(`Added ${unit} Baked Chocolate Chip Cookies to cart`);
-        } else {
-            sessionStorage.setItem("ChocolateChip-dough", unit);
-            alert(`Added ${unit} Chocolate Chip Cookies Dough to cart`);
-        }
+        const product = {
+            name: "Chocolate Chip Cookie",
+            price: baked ? priceBaked : priceDough,
+            quantity: unit,
+            option: baked ? "Baked" : "Dough"
+        };
+
+        addToCart(product);  // uses the function from product.js
+
+        alert(`Added ${unit} ${product.option} Chocolate Chip Cookie(s) to cart.`);
         window.location.href = "../product.html";
     });
 };

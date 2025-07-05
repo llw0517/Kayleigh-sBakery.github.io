@@ -1,0 +1,145 @@
+
+.cart-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgb(241, 237, 244);
+    border-radius: 10px;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info p {
+    margin: 4px 0;
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.clear-cart {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.clear-cart button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(234, 215, 230);
+    font-size: medium;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+}
+
+.clear-cart button:hover {
+    opacity: 0.8;
+}
+
+.qty-btn {
+    background-color: rgb(234, 215, 230);
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qty-btn:hover {
+    opacity: 0.8;
+}
+
+.remove-btn {
+    background-color: #ffb3b3;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.remove-btn:hover {
+    background-color: #ff8c8c;
+    color: white;
+}
+
+
+.form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgb(241, 237, 244);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  
+  .form textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: rgb(234, 215, 230);
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .form button[type="submit"]:hover {
+    opacity: 0.8;
+  }
+
+  
