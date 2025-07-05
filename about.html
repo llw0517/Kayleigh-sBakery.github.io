@@ -12,16 +12,37 @@
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&family=Pacifico&display=swap" rel="stylesheet">
     </head>
     <body>
-        <script type="text/javascript">
-            var counter = 1;
-            setInterval(function() {
+        <script>
+            let counter = 1;
+            let slideTimer;
+        
+            function showSlide() {
                 document.getElementById('radio' + counter).checked = true;
                 counter++;
-                if (counter > 4) {
-                    counter = 1;
+                if (counter > 4) counter = 1;
+        
+                slideTimer = setTimeout(showSlide, 4000);
+            }
+        
+            function resetSlider(manualIndex) {
+                clearTimeout(slideTimer);
+                counter = manualIndex;
+                showSlide(); // restart auto-slider from current manual index
+            }
+        
+            document.addEventListener("DOMContentLoaded", function () {
+                // Start auto slide
+                showSlide();
+        
+                // Add click listeners to manual nav buttons
+                for (let i = 1; i <= 4; i++) {
+                    document.getElementById("radio" + i).addEventListener("click", function () {
+                        resetSlider(i);
+                    });
                 }
-            }, 4000);
+            });
         </script>
+        
 
         <div class="header">
             <div class="name">
