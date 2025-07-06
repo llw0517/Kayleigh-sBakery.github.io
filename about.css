@@ -1,8 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .header {
@@ -18,19 +16,17 @@ body {
    font-style: normal;
 }
 
+/*Slider Section */
 .slider {
-    width: 800px;
-    height: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: rgb(245, 234, 234);
-}
+   width: 800px;
+   height: 500px;
+   margin: 60px auto;
+   border-radius: 10px;
+   overflow: hidden;
+   background: rgb(245, 234, 234);
+   position: relative;
+ }
+ 
 
 .slides {
     width: 500%;
@@ -127,3 +123,88 @@ body {
  #radio4:checked ~ .auto-navigation .auto-btn4 {
    background: rgb(209, 185, 227);
  }
+
+ /* About Section */
+ .about-intro {
+   max-width: 800px;
+   margin: 80px auto 40px auto;
+   padding: 40px 30px;
+   border-radius: 16px;
+   text-align: center;
+ }
+ 
+ .about-intro h2 {
+   font-size: 28px;
+   margin-bottom: 20px;
+ }
+ 
+ .about-intro p {
+   font-size: 16px;
+   color: #555;
+   line-height: 1.6;
+ }
+
+/* Special Section */
+ .special-section {
+   max-width: 900px;
+   margin: 40px auto;
+   padding: 40px 30px;
+   border-radius: 16px;
+   text-align: center;
+   font-family: 'Outfit', sans-serif;
+ }
+ 
+ .special-section h2 {
+   font-size: 28px;
+   margin-bottom: 40px;
+ }
+ 
+ .special-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 30px;
+   text-align: left;
+ }
+ 
+ .special-item {
+   background-color: white;
+   padding: 25px 20px;
+   border-radius: 12px;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.04);
+ }
+ 
+ .special-item h3 {
+   font-size: 20px;
+   margin-bottom: 10px;
+ }
+ 
+ .special-item p {
+   font-size: 15px;
+   color: #555;
+   line-height: 1.6;
+ }
+
+ /*cta Section */
+ .cta {
+   text-align: center;
+   margin: 50px auto;
+ }
+ .cta p {
+   font-size: 16px;
+   margin-bottom: 30px;
+   color: #333;
+ }
+ .cta-button {
+   background-color: rgb(234, 215, 230);
+   padding: 12px 20px;
+   border-radius: 30px;
+   text-decoration: none;
+   color: #333;
+   font-weight: bold;
+ }
+ .cta-button:hover {
+   opacity: 0.8;
+ }
+ 
+ 
+ 
