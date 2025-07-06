@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Received | Kayleigh's Bakery</title>
+  <link rel="stylesheet" href="general.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Outfit:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="thank-you-container">
+    <h1>Thank You!</h1>
+    <p>We've received your order 🎉</p>
+    <p>
+      To complete your order, please <span class="highlight">e-transfer the total amount</span> of:
+    </p>
+    <p class="highlight" id="total-amount">Loading...</p>
+    <p>Send the payment to <span class="highlight">oscarlam597@gmail.com</span></p>
+    <p>Once we receive your payment, your order will be confirmed and processed.</p>
+    <p>Check your email for confirmation.</p>
+    <p class="footer-note">Having trouble? Contact us through the Contact page.</p>
+
+    <!-- Return Button -->
+    <a href="about.html" class="home-button">Return to Homepage</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let total = 0;
+
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+      });
+
+      document.getElementById("total-amount").textContent = `$${total.toFixed(2)}`;
+
+      // Optional: clear cart after displaying
+      localStorage.removeItem("cart");
+    });
+  </script>
+</body>
+</html>
