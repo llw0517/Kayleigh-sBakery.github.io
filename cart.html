@@ -60,14 +60,13 @@
         document.addEventListener("DOMContentLoaded", renderCart);
     </script>
     <script>
-        // Inject cart contents into hidden textarea before form submission
         const orderForm = document.getElementById("order-form");
         orderForm.addEventListener("submit", function (e) {
           const cart = JSON.parse(localStorage.getItem("cart")) || [];
           const orderDetailsField = document.getElementById("order-details");
       
           if (cart.length === 0) {
-            alert("Your cart is empty. Please add some items before placing an order.");
+            alert("Your cart is empty.");
             e.preventDefault();
             return;
           }
@@ -82,8 +81,9 @@
           });
       
           message += `\nTotal: $${total.toFixed(2)}`;
-      
           orderDetailsField.value = message;
+      
+          localStorage.setItem("orderTotal", total.toFixed(2));
         });
       </script>
       

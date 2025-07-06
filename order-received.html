@@ -28,16 +28,10 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      let total = 0;
-
-      cart.forEach(item => {
-        total += item.price * item.quantity;
-      });
-
-      document.getElementById("total-amount").textContent = `$${total.toFixed(2)}`;
-
-      // Optional: clear cart after displaying
+      const total = localStorage.getItem("orderTotal") || "0.00";
+      document.getElementById("total-amount").textContent = `$${parseFloat(total).toFixed(2)}`;
+  
+      localStorage.removeItem("orderTotal");
       localStorage.removeItem("cart");
     });
   </script>
